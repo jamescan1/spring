@@ -12,7 +12,7 @@
 		$.ajax(
 			{
 	         type:"get",
-	         url:"/rest/res1",
+	         url:"/rest/member/checkId.do",
 	         contentType: "application/json",
 	         data :{"userId":$("#userId").val()},
 		     success:function (data,textStatus){
@@ -34,10 +34,10 @@
 <body>
 	<form action="" method="">
 		<input type="text" name="userId" id="userId">
-		<input type="button" value="확인" onclick="checkID()"><br>
+		<input type="button" value="ID중복확인" onclick="checkID()"><br>
 		<span id="message"></span><br>
 		<input type="password" name="pwd" id="pwd">
-		<input type="submit" value="login">
+		<input type="submit" value="회원가입" onclick="checkPW">
 	</form>
 </body>
 </html>
